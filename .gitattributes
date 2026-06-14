@@ -1,0 +1,11 @@
+# Normalize line endings: LF in the repository for all text files.
+* text=auto eol=lf
+
+# Windows batch files must keep CRLF.
+*.bat text eol=crlf
+
+# Treat APKs and other archives as binary (never normalize).
+*.apk binary
+*.dex binary
+*.arsc binary
+*.zip binary

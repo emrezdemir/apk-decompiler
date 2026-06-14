@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# apkdec working output
+*_src/
+*_smali/
+*_extracted/
+*.apk
+!tests/**/*.apk
+
+# Editors / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

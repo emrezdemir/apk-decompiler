@@ -1,0 +1,20 @@
+#!/usr/bin/env sh
+# Zero-install launcher for macOS / Linux.
+#   ./apkdec info app.apk      run a command
+#   ./apkdec                   launch the interactive wizard
+# Requires only Python 3.8+; no `pip install` needed.
+DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+export PYTHONPATH="$DIR/src${PYTHONPATH:+:$PYTHONPATH}"
+
+# Pick the first interpreter that actually runs as Python 3 (this skips broken
+# shims such as the Windows "python3" App Execution Alias).
+for PY in python3 python py; do
+    if command -v "$PY" >/dev/null 2>&1 && \
+       "$PY" -c 'import sys; raise SystemExit(0 if sys.version_info[0] >= 3 else 1)' >/dev/null 2>&1; then
+        exec "$PY" -m apkdec "$@"
+    fi
+done
+
+echo "apkdec: could not find a working Python 3 (tried python3, python, py)." >&2
+echo "Install Python 3.8+ from https://www.python.org/ and try again." >&2
+exit 1
