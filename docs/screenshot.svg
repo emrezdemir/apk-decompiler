@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="416" viewBox="0 0 720 416" font-family="SFMono-Regular,Consolas,Menlo,monospace">
+<rect x="0.5" y="0.5" width="719" height="415" rx="8" fill="#0d1117" stroke="#30363d"/>
+<rect x="0.5" y="0.5" width="719" height="34" rx="8" fill="#161b22"/>
+<rect x="0.5" y="26" width="719" height="10" fill="#161b22"/>
+<circle cx="20" cy="17" r="6" fill="#ff5f56"/>
+<circle cx="40" cy="17" r="6" fill="#ffbd2e"/>
+<circle cx="60" cy="17" r="6" fill="#27c93f"/>
+<text x="360" y="22" fill="#8b949e" font-size="13" text-anchor="middle">apkdec</text>
+<text x="22" y="64" font-size="14" xml:space="preserve"><tspan fill="#3fb950">$ </tspan><tspan fill="#c9d1d9">apkdec info app.apk</tspan></text>
+<text x="22" y="86" font-size="14" xml:space="preserve"><tspan fill="#c9d1d9">  Package:        io.appium.android.apis</tspan></text>
+<text x="22" y="108" font-size="14" xml:space="preserve"><tspan fill="#c9d1d9">  Version:        3.1.0  (code 18)</tspan></text>
+<text x="22" y="130" font-size="14" xml:space="preserve"><tspan fill="#c9d1d9">  Min / Target:   SDK 17 / 28      Debuggable: yes</tspan></text>
+<text x="22" y="152" font-size="14" xml:space="preserve"><tspan fill="#c9d1d9">  Signing:        v1 (JAR), v2/v3 (APK Signing Block)</tspan></text>
+<text x="22" y="174" font-size="14" xml:space="preserve"><tspan fill="#c9d1d9">  DEX:            1 file, 2270 classes, 21187 methods</tspan></text>
+<text x="22" y="196" font-size="14" xml:space="preserve"><tspan fill="#c9d1d9"></tspan></text>
+<text x="22" y="218" font-size="14" xml:space="preserve"><tspan fill="#3fb950">$ </tspan><tspan fill="#c9d1d9">apkdec scan app.apk</tspan></text>
+<text x="22" y="240" font-size="14" xml:space="preserve"><tspan fill="#f85149">  [HIGH]</tspan><tspan fill="#c9d1d9">  Application is debuggable</tspan></text>
+<text x="22" y="262" font-size="14" xml:space="preserve"><tspan fill="#d29922">  [MED ]</tspan><tspan fill="#c9d1d9">  327 exported components without a permission</tspan></text>
+<text x="22" y="284" font-size="14" xml:space="preserve"><tspan fill="#58a6ff">  [LOW ]</tspan><tspan fill="#c9d1d9">  No network security config (cleartext allowed)</tspan></text>
+<text x="22" y="306" font-size="14" xml:space="preserve"><tspan fill="#58a6ff">  [LOW ]</tspan><tspan fill="#c9d1d9">  Low minSdkVersion (17)</tspan></text>
+<text x="22" y="328" font-size="14" xml:space="preserve"><tspan fill="#8b949e">  [INFO]</tspan><tspan fill="#c9d1d9">  Requests 8 sensitive permissions</tspan></text>
+<text x="22" y="350" font-size="14" xml:space="preserve"><tspan fill="#8b949e">  [INFO]</tspan><tspan fill="#c9d1d9">  3 hardcoded HTTP(S) endpoints</tspan></text>
+<text x="22" y="372" font-size="14" xml:space="preserve"><tspan fill="#c9d1d9"></tspan></text>
+<text x="22" y="394" font-size="14" xml:space="preserve"><tspan fill="#8b949e">  Summary: 1 high, 1 medium, 2 low, 2 info</tspan></text>
+</svg>

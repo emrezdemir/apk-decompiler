@@ -40,6 +40,7 @@ All notable changes to this project are documented here. The format is based on
   built on synthesized binary fixtures.
 - Legal/ethical documentation: `DISCLAIMER.md` (terms of use, acceptable use,
   limitation of liability — EN + TR) and `SECURITY.md` (responsible disclosure).
+- README terminal screenshot (`docs/screenshot.svg`).
 
 [Unreleased]: https://github.com/emrezdemir/apk-decompiler/compare/v0.1.0...HEAD
 [0.1.0]: https://github.com/emrezdemir/apk-decompiler/releases/tag/v0.1.0

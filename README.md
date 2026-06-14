@@ -15,27 +15,9 @@ or **smali** decompilation it transparently downloads and drives the best-in-cla
 JVM tools ([jadx](https://github.com/skylot/jadx) and
 [apktool](https://github.com/iBotPeaches/Apktool)).
 
-```
-$ apkdec info app.apk
-APK: app.apk
-  Package:           com.example.app
-  Version name:      2.3.1
-  Version code:      2310
-  Min SDK:           24
-  Target SDK:        34
-  Debuggable:        yes
-  Launcher:          com.example.app.MainActivity
-  Signing:           v1 (JAR), v2/v3 (APK Signing Block)
-  Files:             1043
-  DEX files:         3 (classes.dex, classes2.dex, classes3.dex)
-  Classes:           18422
-  Methods:           96118
-
-Permissions (7):
-  - android.permission.INTERNET
-  - android.permission.ACCESS_NETWORK_STATE
-  ...
-```
+<p align="center">
+  <img src="docs/screenshot.svg" alt="apkdec terminal: 'apkdec info' showing package metadata and 'apkdec scan' showing colour-coded security findings" width="720">
+</p>
 
 > ⚠️ **For education, interoperability, malware analysis and _authorized_ security
 > testing only.** Only analyze software you own or are explicitly permitted to
@@ -58,7 +40,7 @@ Permissions (7):
 | `setup` | Download the JVM engines & check the Java runtime | — |
 | `doctor` | Report your environment and installed tools | — |
 
-Everything in the first five rows works **out of the box** — no Java, no `pip`
+Everything in the first six rows works **out of the box** — no Java, no `pip`
 dependencies, no network.
 
 ## Quick start — one command, no install
@@ -226,6 +208,8 @@ apkdec, apkdec.bat, apkdec.ps1   # zero-install launchers (macOS/Linux, cmd, Pow
 scripts/
   install.sh                     # first-run installer (macOS/Linux)
   install.ps1, install.bat       # first-run installer (Windows) + desktop shortcut
+docs/
+  screenshot.svg                 # terminal screenshot used in this README
 src/apkdec/
   axml.py        # binary AndroidManifest.xml (AXML) decoder  — pure Python
   dex.py         # Dalvik .dex header / table reader          — pure Python
