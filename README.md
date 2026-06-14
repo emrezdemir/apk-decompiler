@@ -110,19 +110,27 @@ Select:
 
 You can also launch it explicitly with `apkdec wizard`.
 
-## Install (optional)
+## Install (optional) — make `apkdec` a global command
 
-To get a global `apkdec` command on your `PATH`:
-
-```bash
-pip install .          # from the cloned repo
-```
-
-Either way you can also run it as a module:
+If you'd rather type `apkdec` from anywhere (instead of the bundled launchers),
+run the **first-run installer** for your platform. It checks your Python, installs
+the command, and runs a health check.
 
 ```bash
-python -m apkdec --help          # with src/ on PYTHONPATH
+# macOS / Linux
+sh scripts/install.sh
+
+# Windows (PowerShell)
+powershell -ExecutionPolicy Bypass -File scripts\install.ps1
+
+# Windows — or just double-click  scripts\install.bat
 ```
+
+On Windows the installer also offers a **Desktop shortcut** that opens the
+interactive wizard with a double-click (pass `-NoShortcut` to skip it).
+
+Prefer to do it by hand? `pip install .` works too, and you can always run it as a
+module with `python -m apkdec --help`.
 
 Requirements:
 
@@ -215,6 +223,9 @@ high-severity issue is found, so it slots into CI.
 
 ```
 apkdec, apkdec.bat, apkdec.ps1   # zero-install launchers (macOS/Linux, cmd, PowerShell)
+scripts/
+  install.sh                     # first-run installer (macOS/Linux)
+  install.ps1, install.bat       # first-run installer (Windows) + desktop shortcut
 src/apkdec/
   axml.py        # binary AndroidManifest.xml (AXML) decoder  — pure Python
   dex.py         # Dalvik .dex header / table reader          — pure Python
@@ -279,6 +290,16 @@ yeterli). Argümansız çalıştırınca (Windows'ta `apkdec.bat`'a çift tıkla
 .\apkdec.ps1                    # interaktif sihirbaz (Windows PowerShell)
 
 ./apkdec info uygulama.apk      # paket adı, sürüm, izinler (Java gerekmez)
+./apkdec scan uygulama.apk      # güvenlik taraması (Java gerekmez)
 ./apkdec manifest uygulama.apk  # AndroidManifest.xml'i okunur hale getirir
 ./apkdec decompile uygulama.apk # jadx ile Java kaynak koduna çevirir
+```
+
+`apkdec`'i her yerden çağrılabilen global komut yapmak ve (Windows'ta) masaüstü
+kısayolu oluşturmak için ilk kurulum scriptini çalıştırın:
+
+```bash
+sh scripts/install.sh                                          # macOS/Linux
+powershell -ExecutionPolicy Bypass -File scripts\install.ps1   # Windows
+# veya Windows'ta scripts\install.bat dosyasına çift tıklayın
 ```

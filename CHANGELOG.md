@@ -31,6 +31,10 @@ All notable changes to this project are documented here. The format is based on
     sub-command on a terminal); drag-and-drop friendly.
   - Bundled launchers `apkdec`, `apkdec.bat`, `apkdec.ps1` that run straight from
     a clone with no `pip install` (double-click `apkdec.bat` on Windows).
+  - First-run installer scripts: `scripts/install.sh` (macOS/Linux) and
+    `scripts/install.ps1` + `scripts/install.bat` (Windows). They verify Python,
+    install the `apkdec` command (venv/pipx/pip-user aware) and run a health
+    check; the Windows installer can create a Desktop shortcut to the wizard.
 - UTF-8 stdout/stderr handling and broken-pipe safety for cross-platform CLIs.
 - Cross-platform CI (Linux / macOS / Windows) and a self-contained test suite
   built on synthesized binary fixtures.
